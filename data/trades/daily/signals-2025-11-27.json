@@ -1,0 +1,975 @@
+[
+  {
+    "signalType": "long",
+    "signalReason": "v1-long",
+    "bar": {
+      "open": 1.09245,
+      "high": 1.09265,
+      "low": 1.0924,
+      "close": 1.09264,
+      "volume": 17996.649999999998,
+      "timestamp": 1764224472175
+    },
+    "indicators": {
+      "v1": {
+        "emaFast": 1.0924922222222222,
+        "emaMid": 1.0924672727272726,
+        "emaSlow": 1.0924577551020407,
+        "rsi": null
+      },
+      "v2": {
+        "emaFast": 1.0925449999999999,
+        "emaMid": 1.0924922222222222,
+        "emaSlow": 1.092477142857143,
+        "rsi": null
+      },
+      "adx": null,
+      "atr": null,
+      "recentHigh": 1.09265,
+      "recentLow": 1.09185
+    },
+    "marketConditions": {
+      "adx": null,
+      "adxReady": false,
+      "marketRegime": "warming up"
+    },
+    "action": "SKIPPED",
+    "skipReason": "ADX not ready",
+    "timestamp": "2025-11-27T06:21:13.931Z",
+    "event": "SIGNAL"
+  },
+  {
+    "signalType": "long",
+    "signalReason": "v2-long",
+    "bar": {
+      "open": 1.09215,
+      "high": 1.0947,
+      "low": 1.0917,
+      "close": 1.09435,
+      "volume": 50449.330000000016,
+      "timestamp": 1764224568673
+    },
+    "indicators": {
+      "v1": {
+        "emaFast": 1.0927528562719098,
+        "emaMid": 1.0925620756778907,
+        "emaSlow": 1.092498240596683,
+        "rsi": null
+      },
+      "v2": {
+        "emaFast": 1.0932556249999998,
+        "emaMid": 1.0927528562719098,
+        "emaSlow": 1.092633565181175,
+        "rsi": null
+      },
+      "adx": null,
+      "atr": null,
+      "recentHigh": 1.0947,
+      "recentLow": 1.0917
+    },
+    "marketConditions": {
+      "adx": null,
+      "adxReady": false,
+      "marketRegime": "warming up"
+    },
+    "action": "SKIPPED",
+    "skipReason": "ADX not ready",
+    "timestamp": "2025-11-27T06:22:50.270Z",
+    "event": "SIGNAL"
+  },
+  {
+    "signalType": "long",
+    "signalReason": "v2-long",
+    "bar": {
+      "open": 1.0943,
+      "high": 1.0944,
+      "low": 1.0938,
+      "close": 1.09434,
+      "volume": 49834.36000000001,
+      "timestamp": 1764224596407
+    },
+    "indicators": {
+      "v1": {
+        "emaFast": 1.093105554878152,
+        "emaMid": 1.092723705161719,
+        "emaSlow": 1.0925734144498795,
+        "rsi": null
+      },
+      "v2": {
+        "emaFast": 1.0937978125,
+        "emaMid": 1.093105554878152,
+        "emaSlow": 1.0928773415838642,
+        "rsi": null
+      },
+      "adx": null,
+      "atr": null,
+      "recentHigh": 1.0947,
+      "recentLow": 1.0917
+    },
+    "marketConditions": {
+      "adx": null,
+      "adxReady": false,
+      "marketRegime": "warming up"
+    },
+    "action": "SKIPPED",
+    "skipReason": "ADX not ready",
+    "timestamp": "2025-11-27T06:23:21.772Z",
+    "event": "SIGNAL"
+  },
+  {
+    "signalType": "long",
+    "signalReason": "v2-long",
+    "bar": {
+      "open": 1.09455,
+      "high": 1.0952,
+      "low": 1.09455,
+      "close": 1.0951,
+      "volume": 48288.039999999986,
+      "timestamp": 1764224757182
+    },
+    "indicators": {
+      "v1": {
+        "emaFast": 1.093961693861659,
+        "emaMid": 1.093269710316433,
+        "emaSlow": 1.0928636526877489,
+        "rsi": null
+      },
+      "v2": {
+        "emaFast": 1.094610869140625,
+        "emaMid": 1.093961693861659,
+        "emaSlow": 1.093596906536332,
+        "rsi": null
+      },
+      "adx": null,
+      "atr": null,
+      "recentHigh": 1.0952,
+      "recentLow": 1.0917
+    },
+    "marketConditions": {
+      "adx": null,
+      "adxReady": false,
+      "marketRegime": "warming up"
+    },
+    "action": "SKIPPED",
+    "skipReason": "ADX not ready",
+    "timestamp": "2025-11-27T06:25:58.880Z",
+    "event": "SIGNAL"
+  },
+  {
+    "signalType": "long",
+    "signalReason": "v2-long",
+    "bar": {
+      "open": 1.0963,
+      "high": 1.0973,
+      "low": 1.0963,
+      "close": 1.09715,
+      "volume": 69048.75999999998,
+      "timestamp": 1764225162029
+    },
+    "indicators": {
+      "v1": {
+        "emaFast": 1.096094444060442,
+        "emaMid": 1.0951880025507608,
+        "emaSlow": 1.094130388378648,
+        "rsi": 72.55806483702405
+      },
+      "v2": {
+        "emaFast": 1.0965922498619556,
+        "emaMid": 1.096094444060442,
+        "emaSlow": 1.0957217821726148,
+        "rsi": 72.55806483702405
+      },
+      "adx": null,
+      "atr": 0.0006582313475427291,
+      "recentHigh": 1.0973,
+      "recentLow": 1.0917
+    },
+    "marketConditions": {
+      "adx": null,
+      "adxReady": false,
+      "marketRegime": "warming up"
+    },
+    "action": "SKIPPED",
+    "skipReason": "ADX not ready",
+    "timestamp": "2025-11-27T06:32:43.945Z",
+    "event": "SIGNAL"
+  },
+  {
+    "signalType": "long",
+    "signalReason": "v2-long",
+    "bar": {
+      "open": 1.09695,
+      "high": 1.0976,
+      "low": 1.09675,
+      "close": 1.0976,
+      "volume": 31627.299999999996,
+      "timestamp": 1764225446342
+    },
+    "indicators": {
+      "v1": {
+        "emaFast": 1.0967919539155777,
+        "emaMid": 1.0961353844918098,
+        "emaSlow": 1.0949760554308021,
+        "rsi": 66.65139886993646
+      },
+      "v2": {
+        "emaFast": 1.0971361567380116,
+        "emaMid": 1.0967919539155777,
+        "emaSlow": 1.0965614572628872,
+        "rsi": 66.65139886993646
+      },
+      "adx": 25.050081062966786,
+      "atr": 0.0005997165397128464,
+      "recentHigh": 1.0976,
+      "recentLow": 1.09485
+    },
+    "marketConditions": {
+      "adx": 25.050081062966786,
+      "adxReady": true,
+      "marketRegime": "trending"
+    },
+    "action": "TAKEN",
+    "timestamp": "2025-11-27T06:37:30.270Z",
+    "event": "SIGNAL"
+  },
+  {
+    "signalType": "short",
+    "signalReason": "v2-short",
+    "bar": {
+      "open": 1.09735,
+      "high": 1.09735,
+      "low": 1.09625,
+      "close": 1.09625,
+      "volume": 35033.28,
+      "timestamp": 1764225922079
+    },
+    "indicators": {
+      "v1": {
+        "emaFast": 1.096973977332216,
+        "emaMid": 1.0968375426762877,
+        "emaSlow": 1.095958480966549,
+        "rsi": 46.74753923177668
+      },
+      "v2": {
+        "emaFast": 1.0967538020677714,
+        "emaMid": 1.096973977332216,
+        "emaSlow": 1.0969811765762176,
+        "rsi": 46.74753923177668
+      },
+      "adx": 14.627245623566651,
+      "atr": 0.0005853219010611885,
+      "recentHigh": 1.09815,
+      "recentLow": 1.09565
+    },
+    "marketConditions": {
+      "adx": 14.627245623566651,
+      "adxReady": true,
+      "marketRegime": "ranging"
+    },
+    "action": "SKIPPED",
+    "skipReason": "Market not trending",
+    "timestamp": "2025-11-27T06:45:25.806Z",
+    "event": "SIGNAL"
+  },
+  {
+    "signalType": "long",
+    "signalReason": "v1-long",
+    "bar": {
+      "open": 1.09813,
+      "high": 1.0982,
+      "low": 1.09813,
+      "close": 1.09816,
+      "volume": 18098.53,
+      "timestamp": 1764226588154
+    },
+    "indicators": {
+      "v1": {
+        "emaFast": 1.0981366666666668,
+        "emaMid": 1.0981327272727273,
+        "emaSlow": 1.0981312244897958,
+        "rsi": null
+      },
+      "v2": {
+        "emaFast": 1.0981450000000001,
+        "emaMid": 1.0981366666666668,
+        "emaSlow": 1.0981342857142857,
+        "rsi": null
+      },
+      "adx": null,
+      "atr": null,
+      "recentHigh": 1.0982,
+      "recentLow": 1.09795
+    },
+    "marketConditions": {
+      "adx": null,
+      "adxReady": false,
+      "marketRegime": "warming up"
+    },
+    "action": "SKIPPED",
+    "skipReason": "ADX not ready",
+    "timestamp": "2025-11-27T06:56:32.550Z",
+    "event": "SIGNAL"
+  },
+  {
+    "signalType": "long",
+    "signalReason": "v2-long",
+    "bar": {
+      "open": 1.09816,
+      "high": 1.0988,
+      "low": 1.09816,
+      "close": 1.09865,
+      "volume": 47489.950000000004,
+      "timestamp": 1764226621805
+    },
+    "indicators": {
+      "v1": {
+        "emaFast": 1.098250740740741,
+        "emaMid": 1.0981797520661156,
+        "emaSlow": 1.0981523990004165,
+        "rsi": null
+      },
+      "v2": {
+        "emaFast": 1.0983975,
+        "emaMid": 1.098250740740741,
+        "emaSlow": 1.0982079591836735,
+        "rsi": null
+      },
+      "adx": null,
+      "atr": null,
+      "recentHigh": 1.0988,
+      "recentLow": 1.09795
+    },
+    "marketConditions": {
+      "adx": null,
+      "adxReady": false,
+      "marketRegime": "warming up"
+    },
+    "action": "SKIPPED",
+    "skipReason": "ADX not ready",
+    "timestamp": "2025-11-27T06:57:03.739Z",
+    "event": "SIGNAL"
+  },
+  {
+    "signalType": "short",
+    "signalReason": "v1-short",
+    "bar": {
+      "open": 1.0976,
+      "high": 1.0976,
+      "low": 1.0952,
+      "close": 1.0953,
+      "volume": 102378.53,
+      "timestamp": 1764226897833
+    },
+    "indicators": {
+      "v1": {
+        "emaFast": 1.097297531514733,
+        "emaMid": 1.0977781595757699,
+        "emaSlow": 1.09797337390725,
+        "rsi": null
+      },
+      "v2": {
+        "emaFast": 1.0964875146484374,
+        "emaMid": 1.097297531514733,
+        "emaSlow": 1.097580502233505,
+        "rsi": null
+      },
+      "adx": null,
+      "atr": null,
+      "recentHigh": 1.0988,
+      "recentLow": 1.0952
+    },
+    "marketConditions": {
+      "adx": null,
+      "adxReady": false,
+      "marketRegime": "warming up"
+    },
+    "action": "SKIPPED",
+    "skipReason": "ADX not ready",
+    "timestamp": "2025-11-27T07:01:40.867Z",
+    "event": "SIGNAL"
+  },
+  {
+    "signalType": "short",
+    "signalReason": "v2-short",
+    "bar": {
+      "open": 1.095,
+      "high": 1.09505,
+      "low": 1.09445,
+      "close": 1.09445,
+      "volume": 105237.06999999999,
+      "timestamp": 1764226992067
+    },
+    "indicators": {
+      "v1": {
+        "emaFast": 1.0960548056372474,
+        "emaMid": 1.097090240102006,
+        "emaSlow": 1.0976278633832193,
+        "rsi": 24.56950860982596
+      },
+      "v2": {
+        "emaFast": 1.0950046893310548,
+        "emaMid": 1.0960548056372474,
+        "emaSlow": 1.0966208119021492,
+        "rsi": 24.56950860982596
+      },
+      "adx": null,
+      "atr": 0.0006257142857142771,
+      "recentHigh": 1.0988,
+      "recentLow": 1.09445
+    },
+    "marketConditions": {
+      "adx": null,
+      "adxReady": false,
+      "marketRegime": "warming up"
+    },
+    "action": "SKIPPED",
+    "skipReason": "ADX not ready",
+    "timestamp": "2025-11-27T07:03:15.000Z",
+    "event": "SIGNAL"
+  },
+  {
+    "signalType": "short",
+    "signalReason": "v1-short",
+    "bar": {
+      "open": 1.09637,
+      "high": 1.0966,
+      "low": 1.09635,
+      "close": 1.0964,
+      "volume": 27822.730000000007,
+      "timestamp": 1764227586958
+    },
+    "indicators": {
+      "v1": {
+        "emaFast": 1.096594154473022,
+        "emaMid": 1.0966302921359006,
+        "emaSlow": 1.0969881411922295,
+        "rsi": 46.05844914015306
+      },
+      "v2": {
+        "emaFast": 1.0964600041669643,
+        "emaMid": 1.096594154473022,
+        "emaSlow": 1.0965903105779136,
+        "rsi": 46.05844914015306
+      },
+      "adx": 22.133476913508773,
+      "atr": 0.0005784082021054961,
+      "recentHigh": 1.0977,
+      "recentLow": 1.0943
+    },
+    "marketConditions": {
+      "adx": 22.133476913508773,
+      "adxReady": true,
+      "marketRegime": "ranging"
+    },
+    "action": "SKIPPED",
+    "skipReason": "Market not trending",
+    "timestamp": "2025-11-27T07:13:10.565Z",
+    "event": "SIGNAL"
+  },
+  {
+    "signalType": "short",
+    "signalReason": "v2-short",
+    "bar": {
+      "open": 1.09509,
+      "high": 1.09509,
+      "low": 1.0941,
+      "close": 1.09414,
+      "volume": 132101.3,
+      "timestamp": 1764228440898
+    },
+    "indicators": {
+      "v1": {
+        "emaFast": 1.095168922780181,
+        "emaMid": 1.0955182128235252,
+        "emaSlow": 1.096021726941312,
+        "rsi": 36.90519866039303
+      },
+      "v2": {
+        "emaFast": 1.0947247017751633,
+        "emaMid": 1.095168922780181,
+        "emaSlow": 1.0953330467610278,
+        "rsi": 36.90519866039303
+      },
+      "adx": 14.773708150946053,
+      "atr": 0.0005910564062114509,
+      "recentHigh": 1.09625,
+      "recentLow": 1.0941
+    },
+    "marketConditions": {
+      "adx": 14.773708150946053,
+      "adxReady": true,
+      "marketRegime": "ranging"
+    },
+    "action": "SKIPPED",
+    "skipReason": "Market not trending",
+    "timestamp": "2025-11-27T07:27:26.003Z",
+    "event": "SIGNAL"
+  },
+  {
+    "signalType": "short",
+    "signalReason": "v2-short",
+    "bar": {
+      "open": 1.09405,
+      "high": 1.09405,
+      "low": 1.09355,
+      "close": 1.09355,
+      "volume": 111937.48999999999,
+      "timestamp": 1764228475098
+    },
+    "indicators": {
+      "v1": {
+        "emaFast": 1.094809162162363,
+        "emaMid": 1.095339284385023,
+        "emaSlow": 1.0959208401273808,
+        "rsi": 33.48540993542122
+      },
+      "v2": {
+        "emaFast": 1.0941373508875816,
+        "emaMid": 1.094809162162363,
+        "emaSlow": 1.0950783257951668,
+        "rsi": 33.48540993542122
+      },
+      "adx": 15.726999205555753,
+      "atr": 0.0005909809486249093,
+      "recentHigh": 1.09625,
+      "recentLow": 1.09355
+    },
+    "marketConditions": {
+      "adx": 15.726999205555753,
+      "adxReady": true,
+      "marketRegime": "ranging"
+    },
+    "action": "SKIPPED",
+    "skipReason": "Market not trending",
+    "timestamp": "2025-11-27T07:27:57.837Z",
+    "event": "SIGNAL"
+  },
+  {
+    "signalType": "short",
+    "signalReason": "v1-short",
+    "bar": {
+      "open": 1.0829,
+      "high": 1.08297,
+      "low": 1.0823,
+      "close": 1.08235,
+      "volume": 44191.47,
+      "timestamp": 1764234421255
+    },
+    "indicators": {
+      "v1": {
+        "emaFast": 1.0827777777777778,
+        "emaMid": 1.0828499999999999,
+        "emaSlow": 1.082877551020408,
+        "rsi": null
+      },
+      "v2": {
+        "emaFast": 1.082625,
+        "emaMid": 1.0827777777777778,
+        "emaSlow": 1.0828214285714286,
+        "rsi": null
+      },
+      "adx": null,
+      "atr": null,
+      "recentHigh": 1.08345,
+      "recentLow": 1.0823
+    },
+    "marketConditions": {
+      "adx": null,
+      "adxReady": false,
+      "marketRegime": "warming up"
+    },
+    "action": "SKIPPED",
+    "skipReason": "ADX not ready",
+    "timestamp": "2025-11-27T09:07:05.560Z",
+    "event": "SIGNAL"
+  },
+  {
+    "signalType": "short",
+    "signalReason": "v1-short",
+    "bar": {
+      "open": 1.08215,
+      "high": 1.08215,
+      "low": 1.0817,
+      "close": 1.08175,
+      "volume": 16545.5,
+      "timestamp": 1764243465719
+    },
+    "indicators": {
+      "v1": {
+        "emaFast": 1.082061111111111,
+        "emaMid": 1.0821136363636363,
+        "emaSlow": 1.0821336734693876,
+        "rsi": null
+      },
+      "v2": {
+        "emaFast": 1.08195,
+        "emaMid": 1.082061111111111,
+        "emaSlow": 1.0820928571428572,
+        "rsi": null
+      },
+      "adx": null,
+      "atr": null,
+      "recentHigh": 1.08235,
+      "recentLow": 1.0817
+    },
+    "marketConditions": {
+      "adx": null,
+      "adxReady": false,
+      "marketRegime": "warming up"
+    },
+    "action": "SKIPPED",
+    "skipReason": "ADX not ready",
+    "timestamp": "2025-11-27T11:37:50.619Z",
+    "event": "SIGNAL"
+  },
+  {
+    "signalType": "short",
+    "signalReason": "v2-short",
+    "bar": {
+      "open": 1.08095,
+      "high": 1.08095,
+      "low": 1.08035,
+      "close": 1.08035,
+      "volume": 22156.15,
+      "timestamp": 1764243710038
+    },
+    "indicators": {
+      "v1": {
+        "emaFast": 1.0813817347401316,
+        "emaMid": 1.0817624633836076,
+        "emaSlow": 1.081957538117814,
+        "rsi": null
+      },
+      "v2": {
+        "emaFast": 1.0808508203125,
+        "emaMid": 1.0813817347401316,
+        "emaSlow": 1.0815943041317229,
+        "rsi": null
+      },
+      "adx": null,
+      "atr": null,
+      "recentHigh": 1.08235,
+      "recentLow": 1.08035
+    },
+    "marketConditions": {
+      "adx": null,
+      "adxReady": false,
+      "marketRegime": "warming up"
+    },
+    "action": "SKIPPED",
+    "skipReason": "ADX not ready",
+    "timestamp": "2025-11-27T11:41:55.303Z",
+    "event": "SIGNAL"
+  },
+  {
+    "signalType": "short",
+    "signalReason": "v2-short",
+    "bar": {
+      "open": 1.08055,
+      "high": 1.0807,
+      "low": 1.0804,
+      "close": 1.0804,
+      "volume": 60876.200000000004,
+      "timestamp": 1764243897061
+    },
+    "indicators": {
+      "v1": {
+        "emaFast": 1.0809138943936236,
+        "emaMid": 1.0813459281298288,
+        "emaSlow": 1.081703546733585,
+        "rsi": 33.047256925585955
+      },
+      "v2": {
+        "emaFast": 1.0806486065673828,
+        "emaMid": 1.0809138943936236,
+        "emaSlow": 1.0811144507269055,
+        "rsi": 33.047256925585955
+      },
+      "adx": null,
+      "atr": 0.0004956632653061194,
+      "recentHigh": 1.08235,
+      "recentLow": 1.0803
+    },
+    "marketConditions": {
+      "adx": null,
+      "adxReady": false,
+      "marketRegime": "warming up"
+    },
+    "action": "SKIPPED",
+    "skipReason": "ADX not ready",
+    "timestamp": "2025-11-27T11:45:00.790Z",
+    "event": "SIGNAL"
+  },
+  {
+    "signalType": "short",
+    "signalReason": "v2-short",
+    "bar": {
+      "open": 1.08085,
+      "high": 1.0809,
+      "low": 1.0802,
+      "close": 1.08045,
+      "volume": 129723.09,
+      "timestamp": 1764244179056
+    },
+    "indicators": {
+      "v1": {
+        "emaFast": 1.0810720026637513,
+        "emaMid": 1.0812127166606336,
+        "emaSlow": 1.081516083805356,
+        "rsi": 42.164807703418354
+      },
+      "v2": {
+        "emaFast": 1.0808337863409518,
+        "emaMid": 1.0810720026637513,
+        "emaSlow": 1.0811144246754136,
+        "rsi": 42.164807703418354
+      },
+      "adx": null,
+      "atr": 0.0006964608773308287,
+      "recentHigh": 1.0828,
+      "recentLow": 1.08
+    },
+    "marketConditions": {
+      "adx": null,
+      "adxReady": false,
+      "marketRegime": "warming up"
+    },
+    "action": "SKIPPED",
+    "skipReason": "ADX not ready",
+    "timestamp": "2025-11-27T11:49:43.133Z",
+    "event": "SIGNAL"
+  },
+  {
+    "signalType": "short",
+    "signalReason": "v2-short",
+    "bar": {
+      "open": 1.08055,
+      "high": 1.08055,
+      "low": 1.0798,
+      "close": 1.08,
+      "volume": 83407.1,
+      "timestamp": 1764244305497
+    },
+    "indicators": {
+      "v1": {
+        "emaFast": 1.0806666024075091,
+        "emaMid": 1.0809813309614325,
+        "emaSlow": 1.0813600179849059,
+        "rsi": 39.47487565819828
+      },
+      "v2": {
+        "emaFast": 1.0803302366463094,
+        "emaMid": 1.0806666024075091,
+        "emaSlow": 1.080815074710261,
+        "rsi": 39.47487565819828
+      },
+      "adx": 21.554024673567827,
+      "atr": 0.0006110440732362913,
+      "recentHigh": 1.0828,
+      "recentLow": 1.0798
+    },
+    "marketConditions": {
+      "adx": 21.554024673567827,
+      "adxReady": true,
+      "marketRegime": "ranging"
+    },
+    "action": "SKIPPED",
+    "skipReason": "Market not trending",
+    "timestamp": "2025-11-27T11:51:46.200Z",
+    "event": "SIGNAL"
+  },
+  {
+    "signalType": "short",
+    "signalReason": "v2-short",
+    "bar": {
+      "open": 1.0788,
+      "high": 1.0788,
+      "low": 1.0776,
+      "close": 1.07865,
+      "volume": 147309.49,
+      "timestamp": 1764244366953
+    },
+    "indicators": {
+      "v1": {
+        "emaFast": 1.0799114014563944,
+        "emaMid": 1.0805965545135805,
+        "emaSlow": 1.0811527029273873,
+        "rsi": 32.05617931032123
+      },
+      "v2": {
+        "emaFast": 1.0791300591615773,
+        "emaMid": 1.0799114014563944,
+        "emaSlow": 1.0802700548891715,
+        "rsi": 32.05617931032123
+      },
+      "adx": 25.65132287237091,
+      "atr": 0.0007019206549843525,
+      "recentHigh": 1.0828,
+      "recentLow": 1.0776
+    },
+    "marketConditions": {
+      "adx": 25.65132287237091,
+      "adxReady": true,
+      "marketRegime": "trending"
+    },
+    "action": "TAKEN",
+    "timestamp": "2025-11-27T11:52:51.262Z",
+    "event": "SIGNAL"
+  },
+  {
+    "signalType": "long",
+    "signalReason": "v1-long",
+    "bar": {
+      "open": 1.07975,
+      "high": 1.0799,
+      "low": 1.0797,
+      "close": 1.07981,
+      "volume": 18143.709999999995,
+      "timestamp": 1764244606673
+    },
+    "indicators": {
+      "v1": {
+        "emaFast": 1.0797633333333334,
+        "emaMid": 1.0797554545454546,
+        "emaSlow": 1.0797524489795918,
+        "rsi": null
+      },
+      "v2": {
+        "emaFast": 1.07978,
+        "emaMid": 1.0797633333333334,
+        "emaSlow": 1.0797585714285716,
+        "rsi": null
+      },
+      "adx": null,
+      "atr": null,
+      "recentHigh": 1.0799,
+      "recentLow": 1.07955
+    },
+    "marketConditions": {
+      "adx": null,
+      "adxReady": false,
+      "marketRegime": "warming up"
+    },
+    "action": "SKIPPED",
+    "skipReason": "ADX not ready",
+    "timestamp": "2025-11-27T11:56:50.988Z",
+    "event": "SIGNAL"
+  },
+  {
+    "signalType": "short",
+    "signalReason": "v2-short",
+    "bar": {
+      "open": 1.0798,
+      "high": 1.0798,
+      "low": 1.0785,
+      "close": 1.0791,
+      "volume": 72762.78,
+      "timestamp": 1764244832288
+    },
+    "indicators": {
+      "v1": {
+        "emaFast": 1.0797022615750453,
+        "emaMid": 1.0797524498324844,
+        "emaSlow": 1.0797558530976181,
+        "rsi": null
+      },
+      "v2": {
+        "emaFast": 1.0794958593750001,
+        "emaMid": 1.0797022615750453,
+        "emaSlow": 1.0797387364004416,
+        "rsi": null
+      },
+      "adx": null,
+      "atr": null,
+      "recentHigh": 1.0802,
+      "recentLow": 1.0785
+    },
+    "marketConditions": {
+      "adx": null,
+      "adxReady": false,
+      "marketRegime": "warming up"
+    },
+    "action": "SKIPPED",
+    "skipReason": "ADX not ready",
+    "timestamp": "2025-11-27T12:00:34.223Z",
+    "event": "SIGNAL"
+  },
+  {
+    "signalType": "short",
+    "signalReason": "v2-short",
+    "bar": {
+      "open": 1.07905,
+      "high": 1.0792,
+      "low": 1.0789,
+      "close": 1.07905,
+      "volume": 109360.08,
+      "timestamp": 1764244863748
+    },
+    "indicators": {
+      "v1": {
+        "emaFast": 1.0795573145583686,
+        "emaMid": 1.0796885907568041,
+        "emaSlow": 1.0797270427671029,
+        "rsi": null
+      },
+      "v2": {
+        "emaFast": 1.0792729296875,
+        "emaMid": 1.0795573145583686,
+        "emaSlow": 1.079640345486093,
+        "rsi": null
+      },
+      "adx": null,
+      "atr": null,
+      "recentHigh": 1.0802,
+      "recentLow": 1.0785
+    },
+    "marketConditions": {
+      "adx": null,
+      "adxReady": false,
+      "marketRegime": "warming up"
+    },
+    "action": "SKIPPED",
+    "skipReason": "ADX not ready",
+    "timestamp": "2025-11-27T12:01:07.232Z",
+    "event": "SIGNAL"
+  },
+  {
+    "signalType": "long",
+    "signalReason": "v2-long",
+    "bar": {
+      "open": 1.0793,
+      "high": 1.0806,
+      "low": 1.0793,
+      "close": 1.0806,
+      "volume": 62949.81,
+      "timestamp": 1764244896687
+    },
+    "indicators": {
+      "v1": {
+        "emaFast": 1.0797890224342868,
+        "emaMid": 1.0797714461425492,
+        "emaSlow": 1.079762673674568,
+        "rsi": null
+      },
+      "v2": {
+        "emaFast": 1.0799364648437502,
+        "emaMid": 1.0797890224342868,
+        "emaSlow": 1.0797774389880797,
+        "rsi": null
+      },
+      "adx": null,
+      "atr": null,
+      "recentHigh": 1.0806,
+      "recentLow": 1.0785
+    },
+    "marketConditions": {
+      "adx": null,
+      "adxReady": false,
+      "marketRegime": "warming up"
+    },
+    "action": "SKIPPED",
+    "skipReason": "ADX not ready",
+    "timestamp": "2025-11-27T12:01:37.273Z",
+    "event": "SIGNAL"
+  }
+]

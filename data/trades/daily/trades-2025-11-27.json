@@ -1,0 +1,108 @@
+[
+  {
+    "side": "long",
+    "entryPrice": 1.0976,
+    "size": 10,
+    "leverage": 5,
+    "stopLossPrice": 1.09375515,
+    "takeProfitPrice": 1.1052896999999997,
+    "riskRewardRatio": 2,
+    "riskDistance": 0.0038448499999998997,
+    "rewardDistance": 0.0076896999999997995,
+    "bar": {
+      "open": 1.09695,
+      "high": 1.0976,
+      "low": 1.09675,
+      "close": 1.0976,
+      "volume": 31627.299999999996,
+      "timestamp": 1764225446342
+    },
+    "indicators": {
+      "v1": {
+        "emaFast": 1.0967919539155777,
+        "emaMid": 1.0961353844918098,
+        "emaSlow": 1.0949760554308021,
+        "rsi": 66.65139886993646
+      },
+      "v2": {
+        "emaFast": 1.0971361567380116,
+        "emaMid": 1.0967919539155777,
+        "emaSlow": 1.0965614572628872,
+        "rsi": 66.65139886993646
+      },
+      "adx": 25.050081062966786,
+      "atr": 0.0005997165397128464,
+      "recentHigh": 1.0976,
+      "recentLow": 1.09485
+    },
+    "marketConditions": {
+      "adx": 25.050081062966786,
+      "adxReady": true,
+      "atr": 0.0005997165397128464,
+      "marketRegime": "trending"
+    },
+    "signalReason": "v2-long",
+    "balance": 7.24278792,
+    "riskParams": {
+      "maxPositionSize": 10,
+      "maxLeverage": 5,
+      "stopLossPct": 0,
+      "takeProfitPct": 0
+    },
+    "timestamp": "2025-11-27T06:37:30.267Z",
+    "event": "ENTRY"
+  },
+  {
+    "side": "short",
+    "entryPrice": 1.07865,
+    "size": 10,
+    "leverage": 5,
+    "stopLossPrice": 1.0838827999999998,
+    "takeProfitPrice": 1.0681844000000007,
+    "riskRewardRatio": 2,
+    "riskDistance": 0.005232799999999704,
+    "rewardDistance": 0.010465599999999409,
+    "bar": {
+      "open": 1.0788,
+      "high": 1.0788,
+      "low": 1.0776,
+      "close": 1.07865,
+      "volume": 147309.49,
+      "timestamp": 1764244366953
+    },
+    "indicators": {
+      "v1": {
+        "emaFast": 1.0799114014563944,
+        "emaMid": 1.0805965545135805,
+        "emaSlow": 1.0811527029273873,
+        "rsi": 32.05617931032123
+      },
+      "v2": {
+        "emaFast": 1.0791300591615773,
+        "emaMid": 1.0799114014563944,
+        "emaSlow": 1.0802700548891715,
+        "rsi": 32.05617931032123
+      },
+      "adx": 25.65132287237091,
+      "atr": 0.0007019206549843525,
+      "recentHigh": 1.0828,
+      "recentLow": 1.0776
+    },
+    "marketConditions": {
+      "adx": 25.65132287237091,
+      "adxReady": true,
+      "atr": 0.0007019206549843525,
+      "marketRegime": "trending"
+    },
+    "signalReason": "v2-short",
+    "balance": 7.08455104,
+    "riskParams": {
+      "maxPositionSize": 10,
+      "maxLeverage": 5,
+      "stopLossPct": 0,
+      "takeProfitPct": 0
+    },
+    "timestamp": "2025-11-27T11:52:51.260Z",
+    "event": "ENTRY"
+  }
+]

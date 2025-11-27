@@ -1,0 +1,3 @@
+Timestamp,Event,Side,Entry Price,Exit Price,Size,Leverage,PnL,PnL %,Duration (ms),Reason,Entry RSI V1,Entry RSI V2,Entry ADX,Entry ATR,Exit RSI V1,Exit RSI V2,Exit ADX,Exit ATR,Risk/Reward,Bar Close,Volume
+"2025-11-26T10:10:46.427Z","ENTRY","long","1.0847","","5.0000","5","","","","v2-long","68.02","68.02","26.67","0.0009","","","","","2.00","1.0847","191666.88"
+"2025-11-26T10:24:41.507Z","EXIT","long","1.0848","1.0840","5.0000","5","-0.0040","-0.37","0.00","flip-short","","","","","54.09","54.09","29.31","0.0010","","1.0840","63436.83"

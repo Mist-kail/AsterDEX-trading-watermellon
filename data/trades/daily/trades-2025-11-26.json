@@ -1,0 +1,99 @@
+[
+  {
+    "side": "long",
+    "entryPrice": 1.0847,
+    "size": 5,
+    "leverage": 5,
+    "stopLossPrice": 1.0797192,
+    "takeProfitPrice": 1.0946616,
+    "riskRewardRatio": 2,
+    "riskDistance": 0.0049808000000000074,
+    "rewardDistance": 0.009961600000000015,
+    "bar": {
+      "open": 1.08345,
+      "high": 1.0855,
+      "low": 1.0834,
+      "close": 1.0847,
+      "volume": 191666.87999999998,
+      "timestamp": 1764151847431
+    },
+    "indicators": {
+      "v1": {
+        "emaFast": 1.0829875907033522,
+        "emaMid": 1.0824707474834359,
+        "emaSlow": 1.0822424460403135,
+        "rsi": 68.01501653041397
+      },
+      "v2": {
+        "emaFast": 1.0838425541927474,
+        "emaMid": 1.0829875907033522,
+        "emaSlow": 1.0826761115872117,
+        "rsi": 68.01501653041397
+      },
+      "adx": 26.674516337055284,
+      "atr": 0.0009160352993506106,
+      "recentHigh": 1.0855,
+      "recentLow": 1.0808
+    },
+    "marketConditions": {
+      "adx": 26.674516337055284,
+      "adxReady": true,
+      "atr": 0.0009160352993506106,
+      "marketRegime": "trending"
+    },
+    "signalReason": "v2-long",
+    "balance": 1.09011164,
+    "riskParams": {
+      "maxPositionSize": 5,
+      "maxLeverage": 5,
+      "stopLossPct": 0,
+      "takeProfitPct": 0
+    },
+    "timestamp": "2025-11-26T10:10:46.427Z",
+    "event": "ENTRY"
+  },
+  {
+    "side": "long",
+    "entryPrice": 1.0848,
+    "exitPrice": 1.084,
+    "size": 5,
+    "leverage": 5,
+    "pnl": -0.0039999999999995595,
+    "pnlPercent": -0.3687315634217883,
+    "duration": 1980,
+    "exitReason": "flip-short",
+    "bar": {
+      "open": 1.08235,
+      "high": 1.084,
+      "low": 1.08235,
+      "close": 1.084,
+      "volume": 63436.83,
+      "timestamp": 1764152681379
+    },
+    "indicators": {
+      "v1": {
+        "emaFast": 1.082585455874809,
+        "emaMid": 1.0831287262642717,
+        "emaSlow": 1.0833267416196113,
+        "rsi": 54.088888104213744
+      },
+      "v2": {
+        "emaFast": 1.0830556133525264,
+        "emaMid": 1.082585455874809,
+        "emaSlow": 1.08277122376924,
+        "rsi": 54.088888104213744
+      },
+      "adx": 29.310421187777916,
+      "atr": 0.001011163410033525,
+      "recentHigh": 1.0891,
+      "recentLow": 1.0807
+    },
+    "marketConditions": {
+      "adx": 29.310421187777916,
+      "atr": 0.001011163410033525
+    },
+    "balance": 0,
+    "timestamp": "2025-11-26T10:24:41.507Z",
+    "event": "EXIT"
+  }
+]
