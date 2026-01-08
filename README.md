@@ -5,6 +5,43 @@ An automated cryptocurrency trading bot for AsterDEX futures trading platform. T
 My indicators have demonstrated reliable performance, generating an estimated 2.3%–7.4% profit during 95 hours of testing.
 To support the developer, contributions in USDT (Sol) can be sent to:
 4F5oYCAWYnUxr6QWudXjn8wEeDSCsaQJhUknZNe9UF18
+
+## Test Results
+
+The bot has been extensively tested with real trading data. Below are screenshots and a recording showing the bot's performance on the AsterDEX platform.
+
+### Performance Screenshots
+
+![Trade History Screenshot 1](./public/photo_5071106000386984785_y.jpg)
+*Trade history showing profitable sell transactions*
+
+![Trade History Screenshot 2](./public/photo_5071106000386984786_y.jpg)
+*Additional trade history entries with realized profits*
+
+![Trade History Screenshot 3](./public/photo_5071106000386984787_y.jpg)
+*More trade history showing consistent profitable trades*
+
+![Trade History Screenshot 4](./public/photo_5836739094048869311_w.jpg)
+*Trade history with various buy and sell transactions*
+
+![Trade History Screenshot 5](./public/photo_5839355107089255379_w.jpg)
+*Detailed trade history showing price movements and profits*
+
+![Trade History Screenshot 6](./public/photo_5839355107089255380_w.jpg)
+*Trade history displaying realized profits in USDT*
+
+![Trade History Screenshot 7](./public/photo_5839355107089255382_w.jpg)
+*Additional trade history entries with profit/loss details*
+
+### Performance Recording
+
+<video width="800" controls>
+  <source src="./public/20251120-1126-48.9121792.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+*Video recording of the bot's trading activity and performance*
+
 ## Features
 
 - **Dual Strategy Support**: 
@@ -72,7 +109,7 @@ ASTER_RPC_URL=https://fapi.asterdex.com
 ASTER_WS_URL=wss://fstream.asterdex.com/ws
 ASTER_API_KEY=your_api_key
 ASTER_API_SECRET=your_api_secret
-ASTER_PRIVATE_KEY=your_private_key
+WALLET_PRIVATE_KEY=your_private_key
 PAIR_SYMBOL=ASTERUSDT-PERP
 MODE=dry-run
 ```
