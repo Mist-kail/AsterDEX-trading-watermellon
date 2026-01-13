@@ -9,6 +9,12 @@ import { OrderTracker } from "../execution/orderTracker";
 import { StatePersistence } from "../state/statePersistence";
 import { KeyManager } from "../security/keyManager";
 import { TradeLogger } from "../logging/tradeLogger";
+import {
+  initAIFilter,
+  evaluateSignalWithTimeout,
+  updateRecentBars,
+  getFilterStats,
+} from "../ai-filter";
 import type {
   AppConfig,
   ExecutionAdapter,
@@ -206,6 +212,8 @@ export class BotRunner {
   private lastLossTime: number = 0;
   private lastPositionCloseTime: number = 0;
   private partialExits: { level: number; taken: boolean }[] = [];
+  private aiFilterEnabled: boolean = false;
+  private aiFilterToken: string = "ETH";
 
   constructor(
     private readonly config: AppConfig,
@@ -231,6 +239,27 @@ export class BotRunner {
     this.statePersistence = new StatePersistence();
     this.tradeLogger = new TradeLogger();
     this.loadWarmState();
+
+    // Initialize AI Filter if configured
+    if (config.aiFilter?.enabled) {
+      this.aiFilterEnabled = true;
+      this.aiFilterToken = config.aiFilter.token || this.extractTokenFromPair(config.credentials.pairSymbol);
+      initAIFilter({
+        enabled: true,
+        token: this.aiFilterToken,
+        timeoutMs: config.aiFilter.timeoutMs || 8000,
+        fallbackOnError: config.aiFilter.fallbackOnError || "skip",
+      });
+    }
+  }
+
+  private extractTokenFromPair(pairSymbol: string): string {
+    // Extract token from pair like "ETHUSDT" -> "ETH" or "BTCUSDT" -> "BTC"
+    const usdtIndex = pairSymbol.indexOf("USDT");
+    if (usdtIndex > 0) {
+      return pairSymbol.substring(0, usdtIndex);
+    }
+    return pairSymbol.substring(0, 3);
   }
 
   private getMongoConnectionUrl(): string {
@@ -544,6 +573,11 @@ export class BotRunner {
     this.lastBar = bar;
     this.barCount++;
 
+    // Update AI filter's recent bars buffer
+    if (this.aiFilterEnabled) {
+      updateRecentBars(bar);
+    }
+
     if (this.tradingFrozen) {
       if (Date.now() < this.freezeUntil) {
         this.log("Skipping signal - trading frozen", { freezeUntil: this.freezeUntil });
@@ -641,6 +675,43 @@ export class BotRunner {
 
   private async applySignal(signal: StrategySignal, bar: SyntheticBar): Promise<boolean> {
     if (!signal) return false;
+
+    // AI Filter: Get second opinion from Grok sentiment + Claude decision
+    if (this.aiFilterEnabled) {
+      try {
+        const filterResult = await evaluateSignalWithTimeout(
+          signal,
+          bar,
+          this.aiFilterToken,
+          this.config.aiFilter?.timeoutMs || 8000
+        );
+
+        if (!filterResult.approved) {
+          this.log("Signal vetoed by AI filter", {
+            direction: signal.type,
+            reasoning: filterResult.reasoning,
+            sentiment: filterResult.sentiment?.sentiment || "N/A",
+            latencyMs: filterResult.latencyMs,
+          });
+          this.logSignal(signal, bar, "SKIPPED", `AI filter: ${filterResult.reasoning}`);
+          return false;
+        }
+
+        this.log("Signal approved by AI filter", {
+          direction: signal.type,
+          reasoning: filterResult.reasoning,
+          sentiment: filterResult.sentiment?.sentiment || "N/A",
+          latencyMs: filterResult.latencyMs,
+        });
+      } catch (error) {
+        const errorMessage = error instanceof Error ? error.message : String(error);
+        this.log("AI filter error - using conservative fallback (skip)", {
+          error: errorMessage,
+        });
+        this.logSignal(signal, bar, "SKIPPED", `AI filter error: ${errorMessage}`);
+        return false;
+      }
+    }
 
     // Time-based reset for consecutive losses (1 hour cooldown)
     if (this.consecutiveLosses >= 2) {

@@ -107,6 +107,13 @@ export type RiskConfig = {
   adxThreshold?: number;
 };
 
+export type AIFilterConfig = {
+  enabled: boolean;
+  token: string;
+  timeoutMs?: number;
+  fallbackOnError?: "skip" | "approve";
+};
+
 export type Mode = "dry-run" | "live";
 
 export type Credentials = {
@@ -124,6 +131,7 @@ export type AppConfig = {
   strategy: WatermellonConfig | PeachConfig;
   risk: RiskConfig;
   strategyType?: "watermellon" | "peach-hybrid";
+  aiFilter?: AIFilterConfig;
 };
 
 export type PositionSide = "long" | "short" | "flat";

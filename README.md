@@ -68,11 +68,18 @@ The bot has been extensively tested with real trading data. Below are screenshot
   - Order tracking and confirmation
   - Flip prevention (minimum hold time)
   
+- **AI-Powered Signal Filtering** (powered by BlockRun):
+  - Real-time X/Twitter sentiment analysis via Grok
+  - Claude Sonnet 4 decision engine for signal approval/veto
+  - Automatic conservative fallback on AI errors
+  - Detailed AI decision logging
+
 - **Comprehensive Logging**:
   - Trade entry/exit logging
   - Signal analysis and filtering
   - Daily CSV and JSON trade logs
   - Real-time console output
+  - AI filter decision logs
 
 ## Prerequisites
 
@@ -130,6 +137,29 @@ ADX_THRESHOLD=25
 ```
 
 **Note**: `MAX_LEVERAGE` must be one of the supported values: **5, 10, 15, or 50**. AsterDEX only accepts these specific leverage multipliers.
+
+### AI Filter Settings (Optional)
+
+Enable AI-powered signal filtering using BlockRun's LLM SDK:
+
+```env
+# Enable AI filter (default: false)
+AI_FILTER_ENABLED=true
+
+# Token symbol for sentiment analysis (default: extracted from pair)
+AI_FILTER_TOKEN=ETH
+
+# Maximum time to wait for AI response in ms (default: 8000)
+AI_FILTER_TIMEOUT_MS=8000
+
+# What to do if AI fails: "skip" (conservative) or "approve" (permissive)
+AI_FILTER_FALLBACK=skip
+
+# BlockRun wallet key for AI API payments (required if AI_FILTER_ENABLED=true)
+BASE_CHAIN_WALLET_KEY=0x...your_private_key
+```
+
+**AI Filter Costs**: Approximately $0.004 per signal reviewed ($0.001 for Grok sentiment + $0.003 for Claude decision).
 
 ### Strategy Selection
 
@@ -267,6 +297,62 @@ A dual-system approach combining two complementary strategies:
 - **Consecutive Loss Limit**: Stops trading after 2 consecutive losses
 - **Risk/Reward Ratio**: Requires minimum 2:1 R:R for Peach Hybrid signals
 
+## AI-Powered Signal Filtering
+
+The bot can optionally use AI to filter trade signals before execution. This feature uses BlockRun's LLM SDK to access Grok (for real-time X/Twitter sentiment) and Claude Sonnet 4 (for decision making).
+
+### How It Works
+
+```
+Technical Signal (EMA/ADX)
+    │
+    ▼
+Grok: "What's the sentiment on $TOKEN on crypto X?"
+    │
+    ▼
+Claude: "Given signal + sentiment, should we trade?"
+    │
+    ├── APPROVE → Execute trade
+    └── VETO → Skip trade, log reasoning
+```
+
+### AI Filter Flow
+
+1. **Signal Generated**: The technical strategy (EMA crossovers + ADX) generates a trade signal
+2. **Sentiment Check**: Grok queries real-time X/Twitter sentiment for the token
+3. **Decision**: Claude Sonnet 4 reviews the signal + sentiment and decides APPROVE or VETO
+4. **Execution**: Only approved signals proceed to execution
+
+### Decision Criteria
+
+The AI approves signals when:
+- Sentiment supports the trade direction (bullish for long, bearish for short)
+- Price action shows momentum in the signal direction
+- No conflicting signals in recent bars
+
+The AI vetoes signals when:
+- Sentiment strongly conflicts with trade direction
+- Price action shows reversal signs
+- Market appears choppy or uncertain
+
+### Logging
+
+AI filter decisions are logged to `data/ai-filter-decisions.json` with:
+- Signal details (direction, token, entry price)
+- Sentiment result (bullish/bearish/neutral + confidence)
+- Decision reasoning
+- Latency and cost metrics
+
+### Cost Estimation
+
+| Component | Cost per Call |
+|-----------|---------------|
+| Grok sentiment | ~$0.001 (minimum) |
+| Claude decision | ~$0.003 |
+| **Total** | **~$0.004 per signal** |
+
+At 50 signals/day: ~$0.20/day (~$6/month)
+
 ## Project Structure
 
 ```
@@ -275,6 +361,12 @@ aster-bot/
 │   ├── bot/
 │   │   └── index.ts              # Main bot entry point
 │   ├── lib/
+│   │   ├── ai-filter/            # AI signal filtering (BlockRun)
+│   │   │   ├── index.ts          # Main evaluateSignal function
+│   │   │   ├── grok.ts           # Grok sentiment fetcher
+│   │   │   ├── claude.ts         # Claude decision engine
+│   │   │   ├── logger.ts         # AI decision logging
+│   │   │   └── types.ts          # AI filter types
 │   │   ├── bot/
 │   │   │   └── botRunner.ts      # Core bot logic
 │   │   ├── execution/
@@ -303,7 +395,8 @@ aster-bot/
 │   │   └── virtualBarBuilder.ts  # Virtual bar construction
 │   └── app/                      # Next.js web interface
 ├── data/
-│   └── trades/                   # Trade logs directory
+│   ├── trades/                   # Trade logs directory
+│   └── ai-filter-decisions.json  # AI filter decision logs
 ├── env.example                    # Environment template
 └── package.json
 ```
