@@ -129,6 +129,28 @@ REQUIRE_TRENDING_MARKET=true
 ADX_THRESHOLD=25
 ```
 
+### AI Stop-Loss (Optional)
+
+Enable AI-powered stop-loss suggestions using [BlockRun LLM](https://blockrun.ai):
+
+```env
+AI_STOPLOSS_ENABLED=true
+BASE_CHAIN_WALLET_KEY=0x...your_private_key...
+```
+
+**Setup:**
+1. Create a Base wallet (or use existing)
+2. Fund it with USDC on Base network
+3. Set `BASE_CHAIN_WALLET_KEY` to your wallet's private key
+4. Set `AI_STOPLOSS_ENABLED=true`
+
+**How it works:**
+- When entering a trade, AI analyzes recent price volatility
+- Suggests optimal stop-loss (0.5%-3%) based on market conditions
+- Cost: ~$0.003 per trade (Claude Sonnet via BlockRun x402 micropayments)
+
+**Note:** Your private key is used only for local signing - it never leaves your machine.
+
 **Note**: `MAX_LEVERAGE` must be one of the supported values: **5, 10, 15, or 50**. AsterDEX only accepts these specific leverage multipliers.
 
 ### Strategy Selection
@@ -258,6 +280,7 @@ A dual-system approach combining two complementary strategies:
 - **Emergency Stop-Loss**: Hard stop at configured percentage (1% for Peach, 2% default)
 - **Trailing Stop-Loss**: Dynamic stop that follows price (0.3% for Peach)
 - **Regular Stop-Loss**: Configurable percentage-based stop
+- **AI-Powered Stop-Loss**: Uses LLM to suggest optimal stop-loss based on market volatility (powered by BlockRun)
 
 ### Market Regime Filtering
 - **ADX Threshold**: Only trades when market is trending (ADX > threshold)
@@ -275,6 +298,8 @@ aster-bot/
 │   ├── bot/
 │   │   └── index.ts              # Main bot entry point
 │   ├── lib/
+│   │   ├── ai-stoploss/
+│   │   │   └── index.ts          # AI-powered stop-loss
 │   │   ├── bot/
 │   │   │   └── botRunner.ts      # Core bot logic
 │   │   ├── execution/

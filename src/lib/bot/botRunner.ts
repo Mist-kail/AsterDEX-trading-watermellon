@@ -9,6 +9,11 @@ import { OrderTracker } from "../execution/orderTracker";
 import { StatePersistence } from "../state/statePersistence";
 import { KeyManager } from "../security/keyManager";
 import { TradeLogger } from "../logging/tradeLogger";
+import {
+  initAIStopLoss,
+  getAIStopLossSuggestion,
+  isEnabled as isAIStopLossEnabled,
+} from "../ai-stoploss";
 import type {
   AppConfig,
   ExecutionAdapter,
@@ -206,6 +211,7 @@ export class BotRunner {
   private lastLossTime: number = 0;
   private lastPositionCloseTime: number = 0;
   private partialExits: { level: number; taken: boolean }[] = [];
+  private recentPrices: number[] = []; // Buffer for AI stop-loss calculation
 
   constructor(
     private readonly config: AppConfig,
@@ -231,6 +237,11 @@ export class BotRunner {
     this.statePersistence = new StatePersistence();
     this.tradeLogger = new TradeLogger();
     this.loadWarmState();
+
+    // Initialize AI stop-loss if enabled
+    if (config.aiStopLoss?.enabled) {
+      initAIStopLoss(config.aiStopLoss);
+    }
   }
 
   private getMongoConnectionUrl(): string {
@@ -543,6 +554,12 @@ export class BotRunner {
     this.lastBarCloseTime = bar.endTime;
     this.lastBar = bar;
     this.barCount++;
+
+    // Update recent prices buffer for AI stop-loss
+    this.recentPrices.push(bar.close);
+    if (this.recentPrices.length > 10) {
+      this.recentPrices.shift();
+    }
 
     if (this.tradingFrozen) {
       if (Date.now() < this.freezeUntil) {
@@ -951,6 +968,27 @@ export class BotRunner {
 
     this.recordFlip(order.timestamp);
     this.emitter.emit("position", this.position);
+
+    // Get AI-suggested stop-loss and apply it
+    if (this.config.aiStopLoss?.enabled && isAIStopLossEnabled()) {
+      const token = this.config.credentials.pairSymbol.replace(/USDT$/i, "");
+      getAIStopLossSuggestion(side, order.price, [...this.recentPrices], token)
+        .then((suggestion) => {
+          this.log("AI Stop-Loss Suggestion", {
+            suggestedPct: suggestion.stopLossPct.toFixed(2) + "%",
+            reasoning: suggestion.reasoning,
+            applied: true,
+          });
+          // Apply the AI-suggested stop-loss
+          this.config.risk.stopLossPct = suggestion.stopLossPct;
+          this.config.risk.useStopLoss = true;
+        })
+        .catch((error) => {
+          this.log("AI Stop-Loss Error (using default)", {
+            error: error instanceof Error ? error.message : String(error),
+          });
+        });
+    }
   }
 
   private async closePosition(reason: string, meta?: Record<string, unknown>) {

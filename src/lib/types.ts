@@ -118,12 +118,19 @@ export type Credentials = {
   pairSymbol: string;
 };
 
+export type AIStopLossConfig = {
+  enabled: boolean;
+  model?: string;
+  timeoutMs?: number;
+};
+
 export type AppConfig = {
   mode: Mode;
   credentials: Credentials;
   strategy: WatermellonConfig | PeachConfig;
   risk: RiskConfig;
   strategyType?: "watermellon" | "peach-hybrid";
+  aiStopLoss?: AIStopLossConfig;
 };
 
 export type PositionSide = "long" | "short" | "flat";
